@@ -1,0 +1,10 @@
+target
+logs
+*.iml
+.idea
+*.swp
+.DS_Store
+.settings
+.project
+.classpath
+.bpmn
