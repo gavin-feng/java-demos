@@ -11,6 +11,7 @@
 
     <modules>
         <module>jedis-demo</module>
+        <module>db</module>
     </modules>
 
     <properties>
@@ -26,6 +27,10 @@
 
     <dependencyManagement>
         <dependencies>
+            <!--
+                spring boot 官网的quick start项目中，采用继承spring-boot-starter-parent的方式，
+                而一个pom文件不能存在两个parent，这里采用 dependencies 方式来解决
+            -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
