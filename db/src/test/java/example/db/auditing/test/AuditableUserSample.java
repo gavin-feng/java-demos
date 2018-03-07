@@ -36,7 +36,7 @@ import static org.junit.Assert.assertThat;
  * @author Thomas Darimont
  */
 @RunWith(SpringRunner.class)
-//@Transactional
+@Transactional
 @SpringBootTest
 public class AuditableUserSample {
 
