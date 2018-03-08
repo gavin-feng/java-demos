@@ -18,6 +18,7 @@ package example.db.auditing.test;
 import example.db.auditing.AuditableUser;
 import example.db.auditing.AuditableUserRepository;
 import example.db.auditing.AuditorAwareImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,7 @@ import static org.junit.Assert.assertThat;
 @RunWith(SpringRunner.class)
 @Transactional
 @SpringBootTest
+@Slf4j
 public class AuditableUserSample {
 
 	@Autowired
@@ -61,5 +63,7 @@ public class AuditableUserSample {
 
 		assertThat(user.getCreatedBy(), is(0L));
 		assertThat(user.getLastModifiedBy(), is(0L));
+
+		log.info("id is: " + user.getId());
 	}
 }
