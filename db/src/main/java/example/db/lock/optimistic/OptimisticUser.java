@@ -1,13 +1,11 @@
-package example.db.lock;
+package example.db.lock.optimistic;
 
 import lombok.Data;
-import org.hibernate.annotations.OptimisticLocking;
 
 import javax.persistence.*;
 
 @Data
-@OptimisticLocking
-@Entity
+@Entity(name = "OptimisticUser")
 @Table(name = "user")
 public class OptimisticUser {
 

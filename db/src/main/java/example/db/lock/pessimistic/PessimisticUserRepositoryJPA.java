@@ -13,11 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package example.db.lock;
+package example.db.lock.pessimistic;
 
+import org.springframework.data.jpa.repository.Lock;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+
+import javax.persistence.LockModeType;
+import java.util.Optional;
 
 /**
  * @author gavin
  */
-public interface OptimisticUserRepository extends CrudRepository<OptimisticUser, Long> {}
+public interface PessimisticUserRepositoryJPA extends CrudRepository<PessimisticUser, Long> {
+    @Lock(LockModeType.PESSIMISTIC_READ)
+    @Query("select u from lockDemoUser u where u.id = ?1")
+    Optional<PessimisticUser> findByIdPessimisticRead(Long id);
+
+    @Lock(LockModeType.PESSIMISTIC_WRITE)
+    @Query("select u from lockDemoUser u where u.id = ?1")
+    Optional<PessimisticUser> findByIdPessimisticWrite(Long id);
+}
