@@ -12,6 +12,7 @@
     <modules>
         <module>jedis-demo</module>
         <module>db</module>
+        <module>web-socket-embeded-tomcat</module>
     </modules>
 
     <properties>
