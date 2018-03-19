@@ -125,6 +125,11 @@ public class BusinessLogic {
         PessimisticUser user = userRes.get();
         log.info("悲观读 " + user.getUsername());
         notify2AndWait1Forever();
+
+        // 在事务2等待锁的timeout时间内，用以下语句可查询当前的锁的情况
+        // select trx_id,trx_state,trx_operation_state,trx_started,trx_requested_lock_id,trx_wait_started,trx_weight,trx_mysql_thread_id,trx_query,trx_lock_structs from information_schema.innodb_trx;
+        // select * from information_schema.innodb_locks; 可以看到有2个锁，类型分别为X和S
+        // select * from information_schema.innodb_lock_waits;
     }
     @Transactional
     public synchronized void readAndWrite_See_Seq2() {

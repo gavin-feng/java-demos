@@ -42,8 +42,8 @@ public class ConcurrencyApplication implements ApplicationContextAware {
         business.setRecordId(3L);
 
         // 此处更改示例相关方法
-        Runnable run1 = () -> {business.phantomReadUpdateSeq1();};
-        Runnable run2 = () -> {business.phantomReadSeq2();};
+        Runnable run1 = () -> business.phantomReadUpdateSeq1();
+        Runnable run2 = () -> business.phantomReadSeq2();
 
         Thread thread1 = new Thread(run1);
         Thread thread2 = new Thread(run2);
