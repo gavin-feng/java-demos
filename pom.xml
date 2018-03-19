@@ -14,6 +14,7 @@
         <module>db</module>
         <module>web-socket-embeded-tomcat</module>
         <module>web-socket-handler</module>
+        <module>fundamental</module>
     </modules>
 
     <properties>
