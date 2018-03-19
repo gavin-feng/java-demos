@@ -52,6 +52,10 @@ import java.util.function.Predicate;
 
 public class RosterTest {
 
+    /**
+     * The CheckPerson interface is a functional interface.
+     * A functional interface is any interface that contains only one abstract method
+     */
     interface CheckPerson {
         boolean test(Person p);
     }

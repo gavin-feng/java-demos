@@ -1,6 +1,6 @@
 package lamda;
 
-@FunctionalInterface
+//@FunctionalInterface
 public interface MyPredicate<T> {
     boolean test(T t);
 }
