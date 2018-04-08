@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
 /**
- * 问题：
+ * 并发的问题：
  *     1、脏读、不可重复读、幻读、第一类更新丢失、第二类更新丢失 等
  *     2、车辆列表页，两个人同时修改； 不是加 @Transactional 就能解决的
  *
