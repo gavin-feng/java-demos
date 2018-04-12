@@ -1,0 +1,3 @@
+example:
+  keywords-map: '{"北京 超跑":"beijing.chaopao","南京 超跑":"nanjing.chaopao"}'
+  stores: 北京,杭州,上海,深圳
