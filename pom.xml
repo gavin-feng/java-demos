@@ -16,6 +16,7 @@
         <module>web-socket-handler</module>
         <module>fundamental</module>
         <module>spring-core</module>
+        <module>prometheus</module>
     </modules>
 
     <properties>

@@ -1,0 +1,8 @@
+# 开放prometheus，访问地址为 /actuator/prometheus
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+server:
+  port: 8090
