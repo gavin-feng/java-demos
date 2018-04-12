@@ -17,6 +17,8 @@
         <module>fundamental</module>
         <module>spring-core</module>
         <module>prometheus</module>
+        <module>spring-boot</module>
+        <module>selenium</module>
     </modules>
 
     <properties>

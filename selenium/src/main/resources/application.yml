@@ -1,0 +1,5 @@
+webdriver:
+  chrome:
+    driver: ${user.home}/apps/webdriver/chromedriver
+  gecko:
+    driver: ${user.home}/apps/webdriver/geckodriver
